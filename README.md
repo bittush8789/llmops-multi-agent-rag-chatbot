@@ -1,12 +1,19 @@
-# 🌌 TechNova Solutions – Enterprise Multi-Agent LLMOps Platform
+# 🌌 TechNova Solutions: Enterprise Multi-Agent LLMOps Platform
 
 [![Production Ready](https://img.shields.io/badge/Status-Production--Ready-brightgreen.svg)](https://github.com/bittush8789/llmops-multi-agent-rag-chatbot)
 [![Kubernetes](https://img.shields.io/badge/Orchestration-Kubernetes-blue.svg)](https://kubernetes.io/)
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-blueviolet.svg)](https://www.terraform.io/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## 🏗️ 1. Professional Architecture
-The platform utilizes a decoupled, cloud-native architecture optimized for enterprise scale and multi-agent intelligence.
+## 📋 1. Project Overview
+**TechNova Solutions** is a high-performance, production-grade LLMOps platform designed to automate enterprise intelligence. Built on a **Multi-Agent Orchestration** architecture, it leverages 10 specialized AI agents (Sales, HR, IT, etc.) and a deep **RAG pipeline** to provide grounded, secure, and accurate responses.
+
+This repository serves as a master template for **LLMOps best practices**, covering everything from IaC and Containerization to automated AI Quality Evaluation.
+
+---
+
+## 🏗️ 2. Production Architecture
+A decoupled, cloud-native design optimized for horizontal scalability and observability.
 
 ```mermaid
 graph TD
@@ -38,74 +45,95 @@ graph TD
 
 ---
 
-## 🚀 2. End-to-End Execution Flow
+## 🛠️ 3. Industry-Standard Setup (Step-by-Step)
 
-Follow these steps to deploy the complete platform from raw data to a live production cluster.
+Follow these precise steps to deploy the entire stack.
 
-### **Step 1: Knowledge Ingestion (Data Pipeline)**
-Transform 60+ enterprise documents into semantic vectors and store them in the cloud.
+### **Phase 1: Environment Preparation**
+Ensure you have the following tools installed:
+- **Python 3.10+**
+- **Docker & Docker Compose**
+- **Terraform**
+- **Kubectl & Helm**
+- **AWS CLI** (Configured)
+- **Kind** (For local K8s testing)
+
+### **Phase 2: Data Ingestion (Vector Database)**
+Populate the Qdrant Cloud Vector Store with 60+ enterprise documents.
 ```bash
-# Set credentials in .env first
+# 1. Clone & Setup
+git clone -b cicd https://github.com/bittush8789/llmops-multi-agent-rag-chatbot.git
+cd llmops-multi-agent-rag-chatbot
+python -m venv venv && source venv/bin/activate
+
+# 2. Install Dependencies
+pip install -r requirements.txt
+
+# 3. Ingest Data to Qdrant Cloud
 python -m backend.ingest
 ```
 
-### **Step 2: AI Quality Evaluation (LLMOps CI)**
-Quantify the accuracy and faithfulness of your RAG system before deployment.
+### **Phase 3: AI Quality Evaluation (LLMOps CI)**
+Validate the RAG system's faithfulness and accuracy before infrastructure rollout.
 ```bash
-# Runs Ragas metrics against ground-truth dataset
+# Run Ragas metrics against ground-truth dataset
 python -m backend.evaluator
 ```
 
-### **Step 3: Infrastructure Provisioning (IaC)**
-Automatically set up the AWS EKS cluster and VPC using Terraform.
+### **Phase 4: Containerization (Docker)**
+Build and optimize the production image.
+```bash
+# Multi-stage build for minimal image size
+docker build -t bittush8789/llmops-chatbot:v1.0.0 .
+
+# Verify locally
+docker run -p 8000:8000 --env-file .env bittush8789/llmops-chatbot:v1.0.0
+```
+
+### **Phase 5: Infrastructure as Code (Terraform)**
+Provision the AWS EKS Cluster and VPC Networking.
 ```bash
 cd infra
 terraform init
-terraform apply --auto-approve
+terraform plan -out=tfplan
+terraform apply "tfplan"
 ```
 
-### **Step 4: Local Testing (Kubernetes in Docker)**
-Verify the deployment locally using a `Kind` cluster before pushing to the cloud.
+### **Phase 6: Kubernetes Deployment (Kind/EKS)**
+Deploy the modular manifests into the `technova` namespace.
+
+**For Local Testing (Kind):**
 ```bash
-kind create cluster --name technova-dev
+kind create cluster --name technova-local
 kubectl apply -f k8s/rbac.yaml
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 ```
 
-### **Step 5: Production Rollout (AWS EKS)**
-Deploy the modular manifests to the live enterprise cluster.
+**For Production (AWS EKS):**
 ```bash
 aws eks update-kubeconfig --region us-east-2 --name technova-eks-cluster
 kubectl apply -f k8s/
 kubectl rollout status deployment/technova-backend -n technova
 ```
 
-### **Step 6: Real-time Monitoring**
-Access metrics and traces to ensure system health and agent performance.
-- **Metrics**: `http://localhost:3000` (Grafana)
-- **API Health**: `http://<LB_IP>/health`
-
 ---
 
-## 🛠️ 3. Comprehensive Tool Guide
-
-| Tool | Purpose | Primary Command |
+## 📊 4. Monitoring & Observability
+| Tool | Access | Purpose |
 | :--- | :--- | :--- |
-| **Docker** | Containerization | `docker build -t technova-app .` |
-| **Kind** | Local K8s | `kind create cluster` |
-| **Terraform** | IaC | `terraform apply` |
-| **Kubectl** | Cluster Management | `kubectl get pods -n technova` |
-| **Ragas** | AI Evaluation | `python -m backend.evaluator` |
-| **FastAPI** | Application Core | `uvicorn backend.main:app` |
+| **Grafana** | `http://localhost:3000` | Real-time dashboards for latency & token usage. |
+| **Prometheus** | `http://localhost:9090` | Time-series data scraping from pods. |
+| **Langfuse** | Cloud Dashboard | Trace analysis for multi-agent "Thinking" steps. |
+| **Health Check** | `/health` | Kubernetes Readiness/Liveness monitoring. |
 
 ---
 
-## 🛡️ 4. Security & Compliance
-- **Namespace Isolation**: All production resources are isolated in the `technova` namespace.
-- **RBAC**: Fine-grained permissions defined in `rbac.yaml` for pod-to-api communication.
-- **Secret Management**: API keys are injected via K8s Secrets, never hardcoded.
-- **Output Guardrails**: Integrated validation node to prevent hallucinations.
+## 🛡️ 5. Security & Compliance
+- **Guardrails AI**: Validates LLM outputs for PII and toxicity.
+- **RBAC**: Fine-grained access control implemented via `k8s/rbac.yaml`.
+- **Secrets Management**: Credentials injected via K8s Secrets, never hardcoded.
+- **Namespace Isolation**: All resources live in the protected `technova` namespace.
 
 ---
 
@@ -116,5 +144,4 @@ Access metrics and traces to ensure system health and agent performance.
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/your-profile)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-lightgrey?style=flat&logo=github)](https://github.com/bittush8789)
 
----
 ⚖️ **Apache License 2.0**
