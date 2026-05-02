@@ -16,3 +16,6 @@ python-multipart
 requests
 jinja2
 prometheus-client
+ragas
+pandas
+datasets

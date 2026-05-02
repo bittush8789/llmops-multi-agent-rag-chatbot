@@ -113,18 +113,31 @@ Integrated for deep trace analysis of LangGraph workflows to debug agent "thinki
 
 ---
 
-## 📚 8. Deployment Steps (End-to-End)
+## 🧪 9. AI Quality Evaluation (RAGAS)
+To ensure the system is production-ready, we implement an automated evaluation pipeline.
+- **Metrics**: Faithfulness (Hallucination check), Answer Relevancy, and Context Precision.
+- **Workflow**: Compares AI answers against a "Ground Truth" dataset.
+
+**Commands:**
+```bash
+# Run the evaluation suite
+python -m backend.evaluator
+```
+
+---
+
+## 📚 10. Deployment Steps (End-to-End)
 
 1. **Step 1: Setup Infrastructure**
    Run Terraform to create the EKS cluster.
 2. **Step 2: Configure Secrets**
    `kubectl create secret generic technova-secrets --from-env-file=.env`
 3. **Step 3: Data Ingestion**
-   Run `python backend/ingest.py` (Local or Job) to populate Qdrant Cloud.
-4. **Step 4: Push Code**
-   Commit to `main` to trigger the GitHub Actions CI/CD.
-5. **Step 5: Verify**
-   Access the LoadBalancer IP provided by `kubectl get svc`.
+   Run `python backend/ingest.py` to populate Qdrant Cloud.
+4. **Step 4: Quality Check**
+   Run `python -m backend.evaluator` to verify system accuracy.
+5. **Step 5: Push Code**
+   Commit to `cicd` to trigger the GitHub Actions deployment.
 
 ---
 

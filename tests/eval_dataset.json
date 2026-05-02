@@ -1,0 +1,18 @@
+[
+    {
+        "question": "What is TechNova Solutions' flagship AI product?",
+        "ground_truth": "TechNova Solutions' flagship AI product is NovaChat AI, which is a multi-agent conversational platform."
+    },
+    {
+        "question": "Does TechNova offer 24/7 technical support?",
+        "ground_truth": "Yes, TechNova provides 24/7 technical support through its multi-agent AI system and a human escalation team."
+    },
+    {
+        "question": "Is NovaCloud GDPR compliant?",
+        "ground_truth": "Yes, NovaCloud is fully GDPR and SOC2 compliant, ensuring high-level security for enterprise data."
+    },
+    {
+        "question": "What services does TechNova provide for cloud migration?",
+        "ground_truth": "TechNova provides Cloud Modernization services, helping enterprises transition legacy workloads to AI-ready cloud environments."
+    }
+]
