@@ -149,3 +149,14 @@ Distributed under the **MIT License**.
 <p align="center">
   Built with ❤️ for the TechNova Solutions Engineering Team
 </p>
+
+---
+
+## 👨‍💻 Developed By
+
+**Bittu Sharma**  
+*AI and MLOps Engineer*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/your-profile)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-lightgrey?style=flat&logo=github)](https://github.com/bittush8789)
+
