@@ -1,0 +1,25 @@
+TechNova Solutions - IT Troubleshooting Scenarios
+
+Scenario 1: SSO Login Failure
+- Symptoms: User receives "Invalid SAML Token" or "Access Denied" after authenticating with Okta.
+- Solution: 
+  1. Check if the user's group membership in Okta includes the 'TechNova-Users' group.
+  2. Verify that the user's system time is synchronized with internet time (NTP).
+  3. Clear browser cookies and cache for *.technovasolutions.com.
+  4. If issue persists, IT admin must rotate the SAML certificate in the TechNova Admin Portal.
+
+Scenario 2: VPN Connection Dropping
+- Symptoms: VPN disconnects every 15-20 minutes.
+- Solution:
+  1. Ensure the user is using the latest version of the GlobalProtect client.
+  2. Check for local ISP stability.
+  3. Disable 'IPv6' in network adapter settings.
+  4. Switch from UDP to TCP in VPN connection settings.
+
+Scenario 3: API Key Rotation
+- Process:
+  1. Log in to the Developer Portal.
+  2. Navigate to 'Security' -> 'API Keys'.
+  3. Click 'Rotate Key' for the specific product (e.g., NovaChat AI).
+  4. Update the key in your application's .env file immediately.
+  5. Old keys remain valid for a 24-hour grace period unless 'Revoke Immediately' is selected.

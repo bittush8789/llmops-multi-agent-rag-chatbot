@@ -1,0 +1,32 @@
+TechNova Solutions – Automation Services
+
+We help organizations automate repetitive, manual processes using NovaAutomation and custom AI-powered workflows.
+
+What We Automate:
+- Data entry and data migration between systems
+- Invoice processing and accounts payable
+- Employee onboarding and offboarding workflows
+- Report generation and distribution
+- Customer communication and follow-ups
+- IT ticket routing and resolution
+- Compliance monitoring and alerting
+- Contract review and approval workflows
+
+Our Approach:
+
+1. Process Discovery: We observe and document your current manual processes, identify bottlenecks, and calculate the time and cost of each process.
+
+2. Automation Design: We design the automated workflow, define triggers, actions, conditions, and error handling. We use NovaAutomation's visual workflow builder for transparency.
+
+3. Build and Test: We build the automation, connect to your systems via APIs or RPA bots, and test thoroughly in a staging environment.
+
+4. Deploy and Monitor: We deploy to production with rollback capabilities. We monitor automation performance and handle exceptions.
+
+5. Optimize: We continuously improve automations based on performance data, edge cases, and changing business requirements.
+
+ROI Examples:
+- Invoice Processing: Reduced processing time from 15 minutes to 30 seconds per invoice. Saved 2,000 hours/year.
+- Employee Onboarding: Automated 23 manual steps. Reduced onboarding time from 5 days to 4 hours.
+- Report Generation: Automated daily sales reports across 12 regions. Eliminated 3 hours of daily manual work.
+
+Contact: automation@technovasolutions.com

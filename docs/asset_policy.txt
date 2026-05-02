@@ -1,0 +1,32 @@
+TechNova Solutions – Asset Policy
+
+TechNova provides technology equipment to all employees. This policy governs the use, maintenance, and return of company assets.
+
+Equipment Provided:
+- Laptop: MacBook Pro 16" or Lenovo ThinkPad X1 Carbon (employee's choice). Refreshed every 3 years.
+- Monitor: One 27" 4K monitor for office use. Remote employees can purchase with their home office stipend.
+- Peripherals: Keyboard, mouse, headset provided upon request.
+- Mobile: Company phone or $50/month BYOD stipend for roles requiring mobile access.
+
+Software Licenses:
+All software must be approved and provisioned by IT. Standard software includes: Microsoft 365, Slack, Zoom, GitHub, Figma, and all TechNova products. Additional software requests are submitted via NovaAssist.
+
+Acceptable Use:
+- Company equipment is for business use. Limited personal use is acceptable.
+- Do not install unauthorized software or modify system configurations.
+- Do not share your device with family members or non-employees.
+- Keep your operating system and software updated.
+
+Security:
+- Full disk encryption must be enabled at all times.
+- Screen lock must activate after 5 minutes of inactivity.
+- Report lost or stolen devices to IT within 1 hour at security@technovasolutions.com.
+- IT can remotely wipe lost devices.
+
+Return Policy:
+All equipment must be returned within 5 business days of employment termination. Shipping labels are provided for remote employees. Failure to return equipment may result in payroll deduction for the replacement cost.
+
+Equipment Replacement:
+For damaged or malfunctioning equipment, submit a ticket via NovaAssist. Replacement devices are shipped within 2 business days.
+
+Contact: it@technovasolutions.com

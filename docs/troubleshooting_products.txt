@@ -1,0 +1,49 @@
+TechNova Solutions – Product Troubleshooting Guide
+
+NovaChat AI Troubleshooting:
+
+Issue: Chatbot is giving incorrect answers.
+Solution: Check if your knowledge base is up to date. Re-upload any recently changed documents. Verify that the AI training status shows "Complete" in the dashboard.
+
+Issue: Chatbot is slow to respond.
+Solution: Check your knowledge base size. For large knowledge bases (>10,000 pages), response times may increase. Consider splitting into focused knowledge bases. Check your internet connection and NovaCloud status page.
+
+Issue: Multi-language support not working.
+Solution: Ensure the target language is enabled in Settings > Languages. Verify your knowledge base contains content in the desired language.
+
+NovaCloud Troubleshooting:
+
+Issue: Application deployment fails.
+Solution: Check the deployment logs in the dashboard. Common causes include missing environment variables, incorrect port configuration, or build script errors. Verify your Dockerfile or buildpack configuration.
+
+Issue: High latency or slow performance.
+Solution: Check CPU and memory utilization in the monitoring dashboard. Consider upgrading your instance type or enabling auto-scaling. Check if your database queries are optimized.
+
+Issue: SSL certificate errors.
+Solution: TechNova provides automatic SSL via Let's Encrypt. If you're using a custom domain, verify DNS is pointing correctly and wait up to 24 hours for propagation.
+
+NovaAnalytics Troubleshooting:
+
+Issue: Dashboard data is stale.
+Solution: Check the data refresh schedule in Settings. For real-time dashboards, verify that the data source connection is active. Test the connection from Settings > Data Sources.
+
+Issue: Query returns no results.
+Solution: Verify the data source contains data for the selected time range. Check filters and dimensions. Try running a simpler query to isolate the issue.
+
+NovaAutomation Troubleshooting:
+
+Issue: Workflow fails at a specific step.
+Solution: Check the execution log for error details. Common causes include expired API credentials, changed endpoints, or data format mismatches. Update the connector configuration and retry.
+
+Issue: Scheduled workflow doesn't run.
+Solution: Verify the schedule is active (not paused). Check the timezone setting. Ensure the workflow has no validation errors.
+
+General Troubleshooting:
+
+Issue: Cannot log in.
+Solution: Reset your password at app.technovasolutions.com/reset-password. If using SSO, contact your IT administrator. Clear browser cache and cookies.
+
+Issue: Missing features or permissions.
+Solution: Check your plan tier. Some features are only available on Pro and Enterprise plans. Contact your admin to verify your role and permissions.
+
+For unresolved issues, contact support@technovasolutions.com or call 1-800-555-NOVA.

@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+chromadb
+sentence-transformers
+langgraph
+langchain
+langchain-community
+langchain-core
+langchain-huggingface
+langchain-groq
+groq
+python-dotenv
+python-multipart
+pypdf
+python-docx

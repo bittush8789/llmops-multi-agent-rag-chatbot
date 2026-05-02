@@ -1,0 +1,21 @@
+TechNova Solutions - Management KPI Summary 2025
+
+Q3 Performance Snapshot:
+- Total Revenue Growth: 25% YoY.
+- Most Popular Product: NovaChat AI (45% of new contracts).
+- Customer Retention Rate: 98%.
+- Average Resolution Time (ART): 1.2 hours.
+
+Trend Analysis:
+- High demand for AI-driven IT automation (NovaAssist).
+- Increased interest from financial services for NovaAnalytics (fraud detection use-cases).
+- Shift toward multi-cloud hybrid deployments.
+
+Common Feedback Themes:
+- Positives: Ease of integration, high accuracy of RAG engine, intuitive UI.
+- Areas for Improvement: More native connectors for legacy ERP systems, faster ingestion for multi-GB datasets.
+
+Strategic Priorities:
+- Expansion into APAC market (Tokyo office expansion).
+- Launch of NovaSecure 2.0 with proactive threat hunting.
+- Achieving carbon-neutral operations by 2027.

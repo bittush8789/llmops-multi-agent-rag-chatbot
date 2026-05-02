@@ -1,0 +1,13 @@
+TechNova Solutions - HR Common Queries
+
+Q: What is the policy for 'Work from Anywhere'?
+A: Employees can work from any location for up to 30 days per year, provided it doesn't conflict with tax residency laws and has manager approval.
+
+Q: How do I submit an expense report?
+A: Use the 'Expenses' module in NovaAssist. Attach receipts for any item over $25. Approval typically takes 3-5 business days.
+
+Q: Does TechNova offer tuition reimbursement?
+A: Yes, we offer up to $5,000 per year for degree-related programs that align with your career path at TechNova.
+
+Q: How do I change my 401(k) contribution?
+A: Log in to the 'Fidelity NetBenefits' portal (accessible via SSO from NovaAssist). Changes take effect in the next pay cycle.

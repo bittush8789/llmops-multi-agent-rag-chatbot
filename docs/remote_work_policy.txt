@@ -1,0 +1,37 @@
+TechNova Solutions – Remote Work Policy
+
+TechNova operates a hybrid work model that balances flexibility with collaboration.
+
+Eligibility:
+All full-time employees are eligible for remote work unless their role requires physical presence (e.g., office management, lab work). Eligibility is confirmed during onboarding.
+
+Hybrid Schedule:
+- Employees may work remotely up to 3 days per week.
+- At least 2 days per week should be spent in the office (Tuesday and Thursday are recommended anchor days).
+- Fully remote arrangements are available for employees located 50+ miles from the nearest office, subject to VP approval.
+
+Equipment:
+- All remote employees receive a company laptop (MacBook Pro or ThinkPad, employee's choice).
+- $2,500 one-time home office setup stipend for desk, chair, monitor, and accessories.
+- $100/month internet stipend for remote work days.
+
+Expectations:
+- Maintain regular working hours (core hours: 10 AM – 4 PM in your local timezone).
+- Be available on Slack and respond within 1 hour during core hours.
+- Attend all scheduled team meetings via video with camera on.
+- Maintain a professional and secure work environment.
+- Use company VPN when accessing internal systems.
+
+Security Requirements:
+- Use company-provided laptop only (no personal devices for work).
+- Enable disk encryption and screen lock.
+- Do not work from public Wi-Fi without VPN.
+- Follow clean desk policy for physical documents.
+
+Fully Remote Employees:
+Fully remote employees must visit their assigned office at least once per quarter for team events, planning sessions, and in-person collaboration.
+
+International Remote Work:
+Working from a country different from your employment country requires prior approval from HR and Legal due to tax and employment law implications. Maximum 30 days per year in a different country.
+
+Contact: hr@technovasolutions.com

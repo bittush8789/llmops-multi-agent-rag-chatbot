@@ -1,0 +1,6 @@
+TechNova Solutions offers the following core services:
+1. Custom AI Development: Building bespoke LLM applications and machine learning models.
+2. Cloud Migration & Management: End-to-end cloud infrastructure services on AWS, Azure, and Google Cloud.
+3. Enterprise Software Development: Full-stack web and mobile application development.
+4. Data Analytics & BI: Big data processing and business intelligence dashboards.
+5. Cyber Security Consulting: Penetration testing, compliance auditing, and security architecture.

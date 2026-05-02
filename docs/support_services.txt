@@ -1,0 +1,46 @@
+TechNova Solutions – Support Services
+
+We offer multi-tier technical support to ensure our customers get the help they need, when they need it.
+
+Support Channels:
+- Email: support@technovasolutions.com
+- Phone: 1-800-555-NOVA (6682)
+- Live Chat: Available on all product dashboards
+- Support Portal: support.technovasolutions.com (ticket tracking, knowledge base, community forum)
+
+Support Tiers:
+
+Standard Support (included with Starter plan):
+- Email support only
+- Response time: 24 hours (business days)
+- Knowledge base access
+- Community forum access
+
+Priority Support (included with Pro plan):
+- Email, phone, and live chat
+- Response time: 4 hours (24/7)
+- Dedicated support queue
+- Screen sharing and remote troubleshooting
+
+Enterprise Support (included with Enterprise plan):
+- All Priority features
+- Response time: 1 hour (24/7)
+- Named Support Engineer
+- Quarterly support reviews
+- Custom escalation procedures
+- On-site support available
+
+Premium Support Add-on ($500/month):
+- 15-minute response time for critical issues (P1)
+- Technical Account Manager
+- Proactive monitoring and alerting
+- Monthly health checks
+
+Issue Severity Levels:
+- P1 (Critical): Complete service outage affecting all users. Target resolution: 4 hours.
+- P2 (High): Major feature unavailable, workaround exists. Target resolution: 8 hours.
+- P3 (Medium): Minor issue, limited impact. Target resolution: 24 hours.
+- P4 (Low): General question or feature request. Target resolution: 48 hours.
+
+Escalation Process:
+If you are not satisfied with the support you receive, you can escalate by emailing escalations@technovasolutions.com or asking your Customer Success Manager to intervene.

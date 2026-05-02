@@ -1,0 +1,30 @@
+TechNova Solutions – Partner Program
+
+NovaPartner Program Overview:
+The NovaPartner Program enables technology partners, consultants, and resellers to grow their business by offering TechNova solutions to their clients. Partners earn commissions, receive training, and get access to co-marketing resources.
+
+Partner Tiers:
+
+Silver Partner:
+- Requirements: 3+ certified consultants, 5+ customer referrals per year
+- Benefits: 10% revenue share, partner portal access, basic training, co-branded materials
+- Support: Email-based partner support with 24-hour response time
+
+Gold Partner:
+- Requirements: 5+ certified consultants, 15+ customer referrals per year, $250K+ influenced revenue
+- Benefits: 15% revenue share, dedicated partner manager, priority support, joint webinars, lead sharing
+- Support: Dedicated Slack channel, 4-hour response time
+
+Platinum Partner:
+- Requirements: 10+ certified consultants, 30+ customer referrals per year, $1M+ influenced revenue
+- Benefits: 20% revenue share, executive sponsorship, custom integrations support, annual partner summit invitation, early access to new products
+- Support: Named partner success manager, 1-hour response time
+
+Technology Partners:
+We integrate with leading platforms including Salesforce, HubSpot, Slack, Microsoft Teams, Jira, ServiceNow, AWS, Azure, Google Cloud, Snowflake, and Databricks. Technology partners receive API access, sandbox environments, and engineering support.
+
+Consulting Partners:
+System integrators and consulting firms can become certified to implement TechNova products. We provide implementation playbooks, training academies, and project management support.
+
+How to Apply:
+Visit partners.technovasolutions.com or email partnerships@technovasolutions.com. Applications are reviewed within 5 business days.

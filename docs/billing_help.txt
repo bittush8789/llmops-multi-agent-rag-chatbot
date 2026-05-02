@@ -1,0 +1,23 @@
+TechNova Solutions - Billing & Account Management FAQ
+
+Billing Cycles:
+- Monthly: Billed on the 1st of every month.
+- Annual: Billed once per year with a 15% discount.
+
+Accepted Payment Methods:
+- Credit Cards (Visa, Mastercard, AMEX).
+- Bank Wire (For Enterprise plans).
+- ACH / Direct Debit.
+
+Invoicing:
+- All invoices are available in the 'Billing' section of the Admin Dashboard.
+- Invoices are emailed automatically to the designated billing contact.
+
+Account Cancellation:
+- To cancel, navigate to 'Settings' -> 'Subscription' -> 'Cancel Plan'.
+- Cancellation requests require 30 days notice.
+- No prorated refunds for mid-cycle cancellations after the 30-day money-back period.
+
+Updating Account Details:
+- Admins can update company address, tax ID, and contact info in 'Settings' -> 'Account'.
+- For ownership transfers, contact accounts@technovasolutions.com.

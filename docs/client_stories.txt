@@ -1,0 +1,13 @@
+TechNova Solutions - Client Success Stories
+
+Global Logistics Co:
+Successfully automated 80% of their shipment tracking inquiries using NovaChat AI, resulting in a 4.9/5 CSAT rating and reducing customer churn by 12%.
+
+FinTech Innovators:
+Used NovaAnalytics to identify fraudulent transactions in real-time. The system detected a $5M fraud attempt within the first week of deployment.
+
+HealthConnect:
+Deployed NovaAssist to manage internal IT and HR requests for 10,000 employees. ART (Average Resolution Time) dropped from 24 hours to under 30 minutes.
+
+EduTech Global:
+Migrated their entire student management system to NovaCloud. They successfully handled a 500% surge in traffic during peak enrollment season with zero downtime.

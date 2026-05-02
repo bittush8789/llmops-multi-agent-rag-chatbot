@@ -1,0 +1,44 @@
+TechNova Solutions – Service Level Agreement (SLA)
+
+TechNova provides SLA guarantees for all paid plans. SLA commitments vary by plan tier.
+
+Uptime Guarantees:
+- Starter Plan: 99.5% monthly uptime
+- Pro Plan: 99.9% monthly uptime
+- Business Plan: 99.95% monthly uptime
+- Enterprise Plan: 99.99% monthly uptime (custom SLA available)
+
+Uptime is measured monthly. Scheduled maintenance windows (announced 48 hours in advance) are excluded from uptime calculations.
+
+Service Credits:
+If we fail to meet our uptime commitment, you are eligible for service credits:
+- 99.0% - 99.5%: 10% credit of monthly fee
+- 98.0% - 99.0%: 25% credit of monthly fee
+- Below 98.0%: 50% credit of monthly fee
+
+Credits must be requested within 30 days of the incident by emailing sla@technovasolutions.com.
+
+Support Response Times:
+- Starter: 24-hour email response (business days)
+- Pro: 4-hour response (24/7)
+- Business: 2-hour response (24/7)
+- Enterprise: 1-hour response (24/7), 15-minute for P1
+
+Resolution Targets:
+- P1 (Critical outage): 4-hour resolution target
+- P2 (Major issue): 8-hour resolution target
+- P3 (Minor issue): 24-hour resolution target
+- P4 (General inquiry): 48-hour resolution target
+
+Data Backup:
+- Automated daily backups for all plans
+- 30-day backup retention (Standard), 90-day (Enterprise)
+- Point-in-time recovery available for Enterprise plans
+- Cross-region backup replication for Enterprise plans
+
+Disaster Recovery:
+- Recovery Time Objective (RTO): 4 hours (Standard), 1 hour (Enterprise)
+- Recovery Point Objective (RPO): 24 hours (Standard), 1 hour (Enterprise)
+
+SLA Status Page: status.technovasolutions.com
+Contact: sla@technovasolutions.com

@@ -1,0 +1,50 @@
+TechNova Solutions – Integrations
+
+TechNova products integrate with 200+ enterprise tools and platforms. Below are the most popular integrations organized by category.
+
+Communication:
+- Slack: Send notifications, create channels, and deploy NovaChat AI as a Slack bot.
+- Microsoft Teams: Full NovaChat AI integration, meeting scheduling via NovaCRM.
+- WhatsApp Business: Deploy NovaChat AI on WhatsApp for customer support.
+- Email (SMTP/IMAP): Email campaigns via NovaCRM, notifications from all products.
+- Zoom: Meeting scheduling and recording integration with NovaCRM.
+
+CRM and Sales:
+- Salesforce: Bi-directional sync of contacts, deals, and activities with NovaCRM.
+- HubSpot: Contact sync, deal pipeline integration, marketing automation triggers.
+- Pipedrive: Deal and contact synchronization.
+
+Project Management:
+- Jira: IT ticket sync with NovaAssist, project tracking integration.
+- Asana: Task creation from NovaAutomation workflows.
+- Monday.com: Board updates and item creation via API.
+- Trello: Card creation and updates from automated workflows.
+
+Cloud and Infrastructure:
+- AWS: NovaCloud deployments, S3 storage integration, Lambda triggers.
+- Microsoft Azure: VM management, Azure AD integration for SSO.
+- Google Cloud: BigQuery data source for NovaAnalytics, GCS storage.
+
+Data and Analytics:
+- Snowflake: Direct connector for NovaAnalytics dashboards.
+- Databricks: ML model integration and data pipeline connectivity.
+- BigQuery: Real-time data source for analytics.
+- PostgreSQL/MySQL/MongoDB: Direct database connectors for all products.
+
+Identity and Access:
+- Okta: SSO and user provisioning across all Nova products.
+- Azure Active Directory: SSO, directory sync, and MFA enforcement.
+- Auth0: Custom authentication integration.
+
+HR and Operations:
+- Workday: Employee data sync with NovaAssist for HR self-service.
+- BambooHR: Leave management and employee directory integration.
+- Gusto: Payroll data integration for finance dashboards.
+
+Developer Tools:
+- GitHub: CI/CD triggers, code repository integration.
+- GitLab: Pipeline integration and merge request automation.
+- Datadog: Application monitoring and alerting integration.
+
+Custom Integrations:
+For integrations not listed above, use our REST API or webhook system. Our API supports OAuth 2.0 authentication and provides comprehensive documentation at api.technovasolutions.com.

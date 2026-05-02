@@ -1,0 +1,21 @@
+TechNova Solutions - Common System Errors & Solutions
+
+Error Code: TN-101 (Connection Timeout)
+- Description: Application cannot reach NovaCloud servers.
+- Solution: Check internet connection, verify VPN is active, or check status.technovasolutions.com for outages.
+
+Error Code: TN-202 (Authentication Failed)
+- Description: Invalid credentials or expired session.
+- Solution: Clear browser cache, re-login, or contact IT for password reset.
+
+Error Code: TN-303 (Quota Exceeded)
+- Description: Subscription limit reached (e.g., too many NovaChat AI messages).
+- Solution: Upgrade your plan or wait for the next billing cycle.
+
+Error Code: TN-404 (Resource Not Found)
+- Description: The requested dashboard or data source does not exist.
+- Solution: Verify the URL or check if the resource was deleted by an admin.
+
+Error Code: TN-505 (Internal Processing Error)
+- Description: High server load or unexpected backend failure.
+- Solution: Refresh the page. If issue persists for >5 minutes, open a support ticket.

@@ -1,0 +1,30 @@
+TechNova Solutions – Consulting Services
+
+Our consulting team brings deep expertise in AI strategy, cloud architecture, data engineering, and digital transformation. We help organizations make informed technology decisions and execute complex initiatives.
+
+Strategy Consulting:
+- AI Readiness Assessment: Evaluate your organization's data maturity, infrastructure, and team capabilities for AI adoption.
+- Digital Transformation Roadmap: Develop a 12-24 month plan for modernizing technology, processes, and culture.
+- Technology Due Diligence: For M&A transactions, we assess target company technology stacks and risks.
+
+Architecture Consulting:
+- Cloud Architecture Design: Multi-cloud, hybrid cloud, and cloud-native architecture planning.
+- Data Architecture: Data lake, data warehouse, and real-time streaming architecture design.
+- Security Architecture: Zero-trust architecture design, IAM strategy, and encryption planning.
+- Integration Architecture: API-first design, event-driven architecture, and microservices planning.
+
+Implementation Consulting:
+- Project Management: Certified PMP project managers oversee complex implementations.
+- Change Management: Help teams adopt new tools and processes with training and communication plans.
+- Quality Assurance: Test strategy development, test automation, and performance testing.
+
+Consulting Rates:
+- Strategy Consultant: $300/hour
+- Senior Architect: $350/hour
+- Principal Consultant: $400/hour
+- Engagement minimums: 40 hours
+
+Delivery Model:
+Our consultants work embedded with your team, either on-site or remotely. We use Agile methodology and provide weekly progress reports, risk assessments, and recommendations.
+
+Contact: consulting@technovasolutions.com

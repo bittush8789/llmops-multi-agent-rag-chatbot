@@ -1,0 +1,22 @@
+TechNova Solutions – Product Comparisons
+
+NovaChat AI vs. NovaAssist:
+NovaChat AI is designed for external customer-facing conversations and support. NovaAssist is designed for internal employee use (IT helpdesk and HR self-service). If you need to serve customers, use NovaChat AI. If you need to serve employees, use NovaAssist. Both products can be deployed simultaneously.
+
+NovaCloud vs. AWS/Azure/GCP:
+NovaCloud is not a replacement for hyperscale cloud providers. Instead, it's a managed cloud platform built on top of AWS and GCP infrastructure. NovaCloud simplifies deployment, scaling, and management with an AI-optimized experience. If you need fine-grained infrastructure control, use AWS/Azure/GCP directly. If you want simplicity and AI-optimized infrastructure, use NovaCloud.
+
+NovaAnalytics vs. Tableau/Power BI:
+NovaAnalytics offers similar capabilities to Tableau and Power BI but with native AI features like natural language querying and predictive analytics built-in. It also integrates natively with all TechNova products. If you're already using a BI tool and don't need TechNova integration, your existing tool may suffice. If you want a unified platform, NovaAnalytics is the better choice.
+
+NovaAutomation vs. Zapier/UiPath:
+NovaAutomation is more powerful than Zapier for complex enterprise workflows and more accessible than UiPath for business users. It combines API-based integrations with RPA bot capabilities and AI-assisted workflow creation. For simple app-to-app integrations, Zapier may be sufficient. For enterprise-grade automation with AI, choose NovaAutomation.
+
+NovaCRM vs. Salesforce/HubSpot:
+NovaCRM is a modern, AI-first CRM designed for mid-market companies. It's simpler than Salesforce and more powerful than HubSpot's free CRM. Key differentiators include native AI lead scoring, customer health scores, and tight integration with NovaChat AI for automated customer communication.
+
+Pricing Comparison (Monthly):
+Starter Plan ($149/month): NovaChat AI + NovaCloud basic + email support
+Pro Plan ($599/month): All products + priority support + 5 users
+Business Plan ($1,499/month): All products + 25 users + dedicated CSM
+Enterprise Plan (Custom): Unlimited users + premium support + custom SLAs + dedicated infrastructure

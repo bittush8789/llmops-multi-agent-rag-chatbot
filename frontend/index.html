@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions | Multi-Agent AI Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <nav class="navbar">
+        <div class="logo"><i class="fas fa-atom"></i> TechNova</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggleBtn"><i class="fas fa-sun"></i></button>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">Next-Gen Enterprise AI</div>
+            <h1>Empowering Enterprise with Multi-Agent AI</h1>
+            <p>Experience the power of 10 specialized AI agents working in harmony to solve your business challenges.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn">Explore Services</a>
+                <a href="#faq" class="btn btn-outline">Common Questions</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="section-header">
+            <h2>The Future of Intelligence</h2>
+            <p>TechNova Solutions is a leading AI & Cloud company, pioneer of the Multi-Agent Orchestration Framework.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-brain fa-2x"></i>
+                <h3>10 Specialized Agents</h3>
+                <p>From Sales to HR, our agents are experts in their specific domains.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-alt fa-2x"></i>
+                <h3>Enterprise Security</h3>
+                <p>SOC2 and GDPR compliant architectures for secure data processing.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud fa-2x"></i>
+                <h3>Cloud Native</h3>
+                <p>Seamlessly integrated with AWS, Azure, and Google Cloud ecosystems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="section-header">
+            <h2>Strategic AI Services</h2>
+            <p>End-to-end solutions for the modern digital enterprise.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>GenAI Implementation</h3>
+                <p>Deploying custom LLM solutions and RAG pipelines for institutional knowledge.</p>
+            </div>
+            <div class="card">
+                <h3>Cloud Modernization</h3>
+                <p>Transitioning legacy workloads to scalable, AI-ready cloud environments.</p>
+            </div>
+            <div class="card">
+                <h3>Data Intelligence</h3>
+                <p>Advanced analytics and predictive modeling for data-driven decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section">
+        <div class="section-header">
+            <h2>Our Innovation Suite</h2>
+            <p>Cutting-edge products built on our proprietary agentic framework.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="product-badge">Flagship</div>
+                <h3>NovaChat AI</h3>
+                <p>Enterprise conversational AI powered by 10 specialized agents.</p>
+            </div>
+            <div class="card">
+                <h3>NovaCloud</h3>
+                <p>Scalable cloud infrastructure optimized for massive AI training and inference.</p>
+            </div>
+            <div class="card">
+                <h3>NovaAnalytics</h3>
+                <p>Real-time performance monitoring and predictive business insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section bg-light">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Quick answers to common inquiries about our platform.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>How secure is my data?</h3>
+                <p>We use end-to-end encryption and isolated environments for all enterprise data processing.</p>
+            </div>
+            <div class="card">
+                <h3>Which LLMs do you support?</h3>
+                <p>Our platform is model-agnostic, supporting Groq, OpenAI, Anthropic, and open-source models like Llama 3.</p>
+            </div>
+            <div class="card">
+                <h3>Do you offer 24/7 support?</h3>
+                <p>Yes, our Multi-Agent system provides instant support, complemented by our human escalation team.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2>Get in Touch</h2>
+            <p>Ready to transform your enterprise? Connect with our team today.</p>
+        </div>
+        <div class="contact-container">
+            <div class="grid">
+                <div class="card text-center">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <h3>Email Us</h3>
+                    <p>contact@technovasolutions.com</p>
+                </div>
+                <div class="card text-center">
+                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                    <h3>Global HQ</h3>
+                    <p>Silicon Valley, CA, USA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 TechNova Solutions. All rights reserved.</p>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbotWidget">
+        <div class="chatbot-header" id="chatbotHeader">
+            <span><i class="fas fa-robot"></i> TechNova Assistant</span>
+            <button class="close-chat" id="closeChatBtn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="chatbot-body" id="chatBody"></div>
+        
+        <div class="chat-suggestions">
+            <span class="suggestion">What is NovaCloud?</span>
+            <span class="suggestion">Tell me about refund policy.</span>
+            <span class="suggestion">Are you GDPR compliant?</span>
+        </div>
+
+        <div class="chatbot-footer">
+            <div class="chatbot-input-container">
+                <button id="voiceBtn" class="icon-btn"><i class="fas fa-microphone"></i></button>
+                <input type="text" id="chatInput" placeholder="Ask anything about TechNova...">
+                <button id="sendBtn" class="icon-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div class="chatbot-actions">
+                <button id="clearBtn" class="small-btn">Clear Conversation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button class="floating-btn" id="floatingBtn">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+TechNova Solutions - Standard Implementation Timelines
+
+NovaChat AI:
+- Basic setup: 2 weeks.
+- Custom knowledge base (5,000+ docs): 4-6 weeks.
+- Full multi-language enterprise rollout: 8-12 weeks.
+
+NovaCloud:
+- Lift-and-shift migration: 4-8 weeks.
+- Cloud-native re-architecture: 3-6 months.
+
+NovaAnalytics:
+- Data source connection: 1 week.
+- Custom dashboard development: 2-4 weeks.
+- ML model training for predictive analytics: 6-10 weeks.
+
+NovaAutomation:
+- Workflow discovery: 1 week.
+- Building and testing 10 complex workflows: 4 weeks.
+
+NovaSecure:
+- Initial audit and tool deployment: 2 weeks.
+- Achieving full compliance (SOC 2 prep): 3-6 months.
+
+Factors Affecting Timeline:
+- Data cleanliness.
+- Availability of client technical team.
+- Complexity of existing legacy integrations.

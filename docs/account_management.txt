@@ -1,0 +1,22 @@
+TechNova Solutions - Account Management Guide
+
+Creating an Account:
+- Users can sign up via the TechNova Cloud Console.
+- Requires a valid corporate email.
+- Account verification is mandatory via email.
+
+Managing Users:
+- Admins can add/remove users via the 'Identity' tab.
+- TechNova supports role-based access control (RBAC): Admin, Developer, Viewer.
+- External collaborators can be added as 'Guest' users.
+
+Password Policies:
+- Minimum 12 characters.
+- Must include uppercase, lowercase, numbers, and special characters.
+- Passwords expire every 90 days.
+- 5 failed attempts will lock the account for 30 minutes.
+
+MFA Setup:
+- Mandatory for all Pro and Enterprise accounts.
+- Supports Google Authenticator, Authy, and hardware keys (YubiKey).
+- Recovery codes are provided during setup; store them securely.

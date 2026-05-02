@@ -1,0 +1,21 @@
+TechNova Solutions - Security Features In-Depth
+
+1. Zero-Trust Architecture:
+- Every request is authenticated and authorized.
+- Micro-segmentation of all services.
+
+2. Data Sovereignty:
+- Choose your data region (USA, EU, India, Japan).
+- Data never leaves the selected jurisdiction.
+
+3. Automated Threat Hunting:
+- NovaSecure uses AI to detect anomalies in user behavior.
+- Automatic lockout of suspicious IP addresses.
+
+4. End-to-End Encryption:
+- Keys managed by customer via BYOK (Bring Your Own Key) for Enterprise plans.
+- Hardware Security Modules (HSM) used for key storage.
+
+5. Compliance as Code:
+- Automated daily checks against SOC 2 and GDPR frameworks.
+- Real-time compliance dashboard for auditors.

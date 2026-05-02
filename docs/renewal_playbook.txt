@@ -1,0 +1,21 @@
+TechNova Solutions - Customer Renewal Playbook
+
+Objective: Ensure 100% net revenue retention.
+
+Phase 1: Performance Review (90 days out)
+- Audit usage statistics (NovaAnalytics).
+- Review all open and resolved support tickets.
+- Prepare ROI report based on saved hours and reduced costs.
+
+Phase 2: Strategy Meeting (60 days out)
+- Present ROI report to key stakeholders.
+- Identify pain points or new requirements.
+- Introduce new features from the TechNova roadmap (e.g., NovaSecure 2.0).
+
+Phase 3: Proposal & Negotiation (45 days out)
+- Provide renewal proposal with multi-year discount options.
+- Address any pricing or feature concerns.
+
+Phase 4: Contract Signature (30 days out)
+- Finalize legal and procurement details.
+- Transition account to next-year success plan.

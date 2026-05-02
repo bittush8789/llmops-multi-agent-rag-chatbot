@@ -1,0 +1,5 @@
+Product Documentation:
+1. NovaChat AI: Our flagship enterprise conversational AI. It integrates with your internal knowledge base to provide instant answers to employee and customer queries. Features include multi-language support and sentiment analysis.
+2. NovaCloud: A secure, scalable cloud hosting platform optimized for AI workloads. Features auto-scaling, built-in DDoS protection, and one-click database deployments.
+3. NovaAnalytics: A big data platform that connects to various data sources (SQL, NoSQL, APIs) to provide real-time dashboards and predictive analytics using machine learning.
+4. NovaAutomation: A Robotic Process Automation (RPA) tool that automates repetitive tasks such as data entry, invoice processing, and report generation.

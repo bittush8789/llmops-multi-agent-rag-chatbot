@@ -1,0 +1,36 @@
+TechNova Solutions – Product Onboarding Guide
+
+Getting Started with TechNova Products:
+
+Step 1: Create Your Account
+Visit app.technovasolutions.com and click "Start Free Trial." Enter your business email, company name, and select your plan. No credit card required for the 14-day trial.
+
+Step 2: Choose Your Products
+During signup, select which products you'd like to activate. You can add or remove products later from the Admin Dashboard.
+
+Step 3: Connect Your Data
+- NovaChat AI: Upload your knowledge base documents (PDFs, docs, web URLs). The AI will process and index them within 30 minutes.
+- NovaCloud: Connect your existing cloud accounts or provision new infrastructure directly.
+- NovaAnalytics: Add data sources by entering connection details. We support 50+ connectors.
+- NovaCRM: Import contacts via CSV or connect to Salesforce/HubSpot for automatic sync.
+- NovaAutomation: Browse pre-built workflow templates or create your first automation.
+- NovaAssist: Connect to Jira/ServiceNow for IT tickets and Workday/BambooHR for HR data.
+- NovaSecure: Install the security agent on your infrastructure for vulnerability scanning.
+
+Step 4: Invite Your Team
+Add team members from the Admin Dashboard. Assign roles (Admin, Manager, User, Viewer) and configure SSO if available.
+
+Step 5: Customize
+Apply your company branding (logo, colors, domain) to customer-facing products like NovaChat AI and NovaCRM.
+
+Step 6: Go Live
+Once testing is complete, switch from sandbox to production mode. Our onboarding team is available for go-live support.
+
+Onboarding Support:
+All new customers receive a dedicated onboarding specialist for the first 30 days. Schedule your kickoff call at onboarding.technovasolutions.com.
+
+Self-Service Resources:
+- Video tutorials: learn.technovasolutions.com
+- Knowledge base: help.technovasolutions.com
+- Community forum: community.technovasolutions.com
+- API documentation: api.technovasolutions.com/docs

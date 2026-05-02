@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.env
+chroma_db/
+analytics_data.json
+.vscode/
+.idea/
+.DS_Store
+node_modules/
+dist/
+build/
+*.log

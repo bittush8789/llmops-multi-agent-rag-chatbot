@@ -1,0 +1,50 @@
+TechNova Solutions – Release Notes
+
+NovaChat AI v3.2 (April 2026):
+- Added WhatsApp Business integration for customer support
+- Improved sentiment analysis accuracy by 15%
+- Added conversation tagging and categorization
+- Fixed: Occasional timeout on large knowledge base queries
+- Fixed: Language detection failing for mixed-language inputs
+
+NovaCloud v2.8 (March 2026):
+- Launched South America region (São Paulo)
+- Added GPU auto-scaling for ML training workloads
+- Improved container startup time by 40%
+- Added real-time cost alerts with Slack notifications
+- Fixed: Intermittent DNS resolution delays in EU regions
+
+NovaAnalytics v2.6 (March 2026):
+- Natural language querying now supports 8 languages
+- Added 15 new pre-built dashboard templates
+- Improved data refresh performance by 3x
+- Added anomaly detection alerts via email and Slack
+- Fixed: CSV export failing for datasets larger than 1GB
+
+NovaAutomation v2.3 (February 2026):
+- AI-assisted workflow creation (describe in English, AI builds the workflow)
+- Added 50 new pre-built connectors (total now 200+)
+- Improved error handling with customizable retry policies
+- Added workflow versioning and rollback
+- Fixed: Scheduled workflows occasionally skipping executions
+
+NovaSecure v1.5 (February 2026):
+- Added insider threat detection module
+- Improved vulnerability scanning speed by 60%
+- Added compliance report export for auditors
+- Real-time alerting via PagerDuty integration
+- Fixed: False positive rate reduced by 25%
+
+NovaCRM v2.2 (January 2026):
+- AI-powered sales forecasting with 90% accuracy
+- Added customer health score dashboard
+- Improved email campaign deliverability tracking
+- Added bulk import/export for contacts and deals
+- Fixed: Calendar sync issues with Google Calendar
+
+NovaAssist v2.0 (January 2026):
+- Multi-language support (12 languages)
+- Added expense report submission workflow
+- Improved IT ticket auto-categorization accuracy to 95%
+- Added integration with Okta for password resets
+- Fixed: Duplicate ticket creation for email-based submissions

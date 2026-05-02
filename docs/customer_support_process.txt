@@ -1,0 +1,21 @@
+TechNova Solutions - Customer Support Process
+
+1. Ticket Submission:
+- Customers can submit tickets via email, phone, or the NovaAssist portal.
+- All tickets are automatically categorized by the NovaAssist AI.
+
+2. Triage:
+- Level 1 Support: Handles general inquiries and known issues (Billing, Basic Troubleshooting).
+- Level 2 Support: Handles complex technical issues (API integration, Cloud performance).
+- Level 3 Support: Senior Engineering team for core system bugs.
+
+3. SLA Management:
+- Tickets are prioritized based on the customer's plan (Enterprise > Pro > Starter).
+- P1 issues are escalated to management after 2 hours without resolution.
+
+4. Feedback Loop:
+- After ticket closure, a CSAT survey is sent to the user.
+- Feedback is reviewed weekly by the Customer Success team.
+
+5. Escalation:
+- If a customer is unsatisfied, they can request a 'Manager Callback' or contact their dedicated Account Manager (Enterprise only).

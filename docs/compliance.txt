@@ -1,0 +1,34 @@
+TechNova Solutions – Compliance
+
+TechNova maintains compliance with major industry standards and regulations to ensure our customers can trust us with their most sensitive data.
+
+SOC 2 Type II:
+TechNova is SOC 2 Type II certified. Our annual audit covers the Trust Service Criteria: Security, Availability, Processing Integrity, Confidentiality, and Privacy. Audit reports are available to customers under NDA upon request.
+
+ISO 27001:
+Our Information Security Management System (ISMS) is ISO 27001 certified. We undergo annual surveillance audits and full recertification every 3 years.
+
+GDPR (General Data Protection Regulation):
+TechNova is fully GDPR compliant. We act as a Data Processor for customer data and provide Data Processing Agreements (DPAs) to all EU customers. We support data subject rights including access, rectification, deletion, and portability.
+
+HIPAA (Health Insurance Portability and Accountability Act):
+For healthcare clients, TechNova offers HIPAA-compliant deployments with Business Associate Agreements (BAAs). This includes dedicated infrastructure, enhanced audit logging, and additional access controls.
+
+CCPA (California Consumer Privacy Act):
+We comply with CCPA requirements including the right to know, right to delete, and right to opt-out. Our privacy policy details our data practices transparently.
+
+PCI DSS:
+Payment card data is processed through PCI DSS Level 1 certified payment processor (Stripe). TechNova never stores raw credit card numbers on our systems.
+
+Data Residency:
+Enterprise customers can choose their data residency region: US, EU, or APAC. All data remains within the selected region and is not transferred across borders without explicit consent.
+
+Compliance Documents Available:
+- SOC 2 Type II Report
+- ISO 27001 Certificate
+- Data Processing Agreement (DPA)
+- Business Associate Agreement (BAA)
+- Penetration Test Summary
+- Privacy Impact Assessment
+
+Request compliance documents: compliance@technovasolutions.com

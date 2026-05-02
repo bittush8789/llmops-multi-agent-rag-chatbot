@@ -1,0 +1,16 @@
+TechNova Solutions - IT Support Issue Log (Common)
+
+Issue: NovaChat AI widget not loading on external site.
+Resolution: Check the 'Authorized Domains' list in the TechNova Admin Portal. Ensure CORS headers are correctly configured on the hosting server.
+
+Issue: Slow performance in NovaAnalytics dashboards.
+Resolution: Verify the connection string to the source database. Check if the dataset size exceeds the 'Standard' instance limits; if so, upscale to 'High-Performance' compute.
+
+Issue: User cannot see the 'Settings' tab.
+Resolution: User is likely assigned a 'Viewer' or 'Developer' role. Only 'Admin' roles can access system-wide settings.
+
+Issue: Slack integration failing to post messages.
+Resolution: Re-authenticate the TechNova Slack App. Ensure the app has 'write' permissions to the specific channel.
+
+Issue: PDF ingestion failing for certain files.
+Resolution: Ensure PDFs are not password-protected or encrypted. Verify that the files contain selectable text (not just images/scans).

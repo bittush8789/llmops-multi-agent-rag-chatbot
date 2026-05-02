@@ -1,0 +1,5 @@
+Pricing Plans:
+Starter: $99/month. Includes basic access to NovaCloud and standard email support.
+Pro: $499/month. Includes NovaChat AI, NovaAnalytics, and priority 24/7 support.
+Enterprise: Custom pricing. Includes full suite, dedicated account manager, custom integrations, and SLA guarantee.
+Consulting rate: $250/hour for custom software development.

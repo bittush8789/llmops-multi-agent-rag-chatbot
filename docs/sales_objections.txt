@@ -1,0 +1,13 @@
+TechNova Solutions - Sales Objections & Official Responses
+
+Objection: "We already use ChatGPT/OpenAI."
+Response: "ChatGPT is a general-purpose model. TechNova Solutions provides a secure, enterprise-grade environment (NovaChat AI) that is grounded ONLY in your private data, ensuring zero data leakage and high factual accuracy. Plus, we integrate natively with your cloud infrastructure."
+
+Objection: "Our data is too sensitive for the cloud."
+Response: "We offer local data residency in 4 global regions and support 'Bring Your Own Key' (BYOK) encryption. For highly sensitive workloads, we can deploy TechNova in your private VPC with no external internet access."
+
+Objection: "We don't have the IT resources to implement this."
+Response: "TechNova is designed for rapid deployment. Our 'Managed Implementation' service handles 90% of the heavy lifting. Most customers go live within 4 weeks."
+
+Objection: "What if the AI hallucinates?"
+Response: "Our Multi-Agent architecture includes a dedicated 'Validator Agent' that cross-references every answer against your documentation. If the info isn't there, the AI will say it doesn't know, rather than making it up."

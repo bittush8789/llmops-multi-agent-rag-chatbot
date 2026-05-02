@@ -1,0 +1,30 @@
+Frequently Asked Questions:
+Q: What are your working hours?
+A: Our global support team is available 24/7. Core business hours are 9 AM to 6 PM PST.
+
+Q: How do I contact technical support?
+A: You can reach technical support via email at support@technovasolutions.com or call 1-800-555-NOVA.
+
+Q: Do you offer service level agreements (SLAs)?
+A: Yes, we offer 99.9% uptime SLAs for all enterprise contracts.
+
+Q: How do I reset my password for the customer portal?
+A: Click on the "Forgot Password" link on the portal login page. A reset link will be sent to your registered email.
+
+Q: Can I upgrade my plan mid-cycle?
+A: Yes, you can upgrade your plan at any time through the billing dashboard. Prorated charges will apply.
+
+Q: Do you provide dedicated account managers?
+A: Yes, all Enterprise tier clients are assigned a dedicated account manager.
+
+Q: How long does a typical cloud migration take?
+A: A typical migration takes between 3 to 6 months depending on the complexity of your infrastructure.
+
+Q: Is there a free trial for your products?
+A: We offer a 14-day free trial for NovaChat AI and NovaAnalytics.
+
+Q: How do I cancel my subscription?
+A: Subscriptions can be cancelled via the billing portal. Notice must be given 30 days prior to the next billing cycle.
+
+Q: What payment methods do you accept?
+A: We accept all major credit cards, wire transfers, and ACH payments.

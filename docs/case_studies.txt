@@ -1,0 +1,4 @@
+Case Studies:
+Acme Corp: TechNova successfully migrated Acme Corp's legacy on-premise infrastructure to NovaCloud, resulting in a 40% reduction in IT costs and 99.99% uptime.
+Global Finance Inc: We implemented NovaAnalytics to process over 10TB of financial data daily, reducing report generation time from 48 hours to 15 minutes.
+HealthPlus: Our team deployed a custom HIPAA-compliant version of NovaChat AI, which now handles 60% of their initial patient inquiries automatically.

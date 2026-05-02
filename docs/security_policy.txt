@@ -1,0 +1,5 @@
+TechNova Security & Compliance Policy:
+Data Protection: All customer data is encrypted at rest using AES-256 and in transit using TLS 1.3.
+Compliance: TechNova is SOC 2 Type II certified, GDPR compliant, and HIPAA compliant for healthcare clients.
+Access Control: We enforce strict Role-Based Access Control (RBAC) and mandatory Multi-Factor Authentication (MFA) for all internal systems.
+Incident Response: We have a dedicated 24/7 Security Operations Center (SOC). In the event of a breach, customers are notified within 24 hours.

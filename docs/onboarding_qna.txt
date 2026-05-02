@@ -1,0 +1,13 @@
+TechNova Solutions - Onboarding Q&A
+
+Q: How do I get my login credentials?
+A: You will receive an automated email from 'no-reply@technovasolutions.com' on your first day. Follow the link to set your password and enable MFA.
+
+Q: Who is my onboarding buddy?
+A: Your manager will assign an onboarding buddy during your first team meeting. You can also find this info in the 'NovaAssist' employee portal.
+
+Q: Where can I find the company Org Chart?
+A: The Org Chart is available in the 'People' tab of the NovaAssist portal.
+
+Q: How do I set up my company laptop?
+A: Follow the 'NovaLaunch' checklist included in your equipment box. If you encounter issues, contact it-support@technovasolutions.com.

@@ -1,0 +1,33 @@
+TechNova Solutions – Vendor Policy
+
+Vendor Selection Criteria:
+TechNova selects vendors based on quality, reliability, security posture, pricing competitiveness, and alignment with our values. All vendors must pass a security and compliance review before engagement.
+
+Vendor Onboarding:
+1. Submit vendor application at vendors.technovasolutions.com
+2. Complete security questionnaire and NDA
+3. Provide references from 3 existing enterprise clients
+4. Undergo compliance review (SOC 2 or equivalent required)
+5. Contract negotiation and MSA execution
+6. Onboarding and integration setup
+
+Payment Terms:
+- Standard payment terms are Net 30 from invoice date
+- Large contracts may negotiate Net 45 or Net 60
+- All payments processed via wire transfer or ACH
+- Invoices must be submitted to ap@technovasolutions.com
+
+Vendor Code of Conduct:
+All vendors must adhere to our Vendor Code of Conduct which includes ethical business practices, anti-corruption compliance, data protection obligations, environmental responsibility, and fair labor practices.
+
+Vendor Performance Reviews:
+We conduct quarterly business reviews (QBRs) with all strategic vendors to assess performance, address issues, and align on future plans. Vendors are rated on delivery quality, responsiveness, innovation, and value.
+
+Preferred Vendors:
+- Cloud Infrastructure: AWS, Google Cloud, Azure
+- Security Tools: CrowdStrike, Palo Alto Networks
+- Communication: Slack, Zoom
+- HR/Payroll: Workday, Gusto
+- DevOps: GitHub, CircleCI, Datadog
+
+Contact: procurement@technovasolutions.com
