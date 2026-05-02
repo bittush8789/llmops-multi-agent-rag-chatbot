@@ -3,170 +3,137 @@
 [![Production Ready](https://img.shields.io/badge/Status-Production--Ready-brightgreen.svg)](https://github.com/bittush8789/llmops-multi-agent-rag-chatbot)
 [![Kubernetes](https://img.shields.io/badge/Orchestration-Kubernetes-blue.svg)](https://kubernetes.io/)
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-blueviolet.svg)](https://www.terraform.io/)
-[![LLMOps](https://img.shields.io/badge/Stack-LLMOps-orange.svg)](#cicd-pipeline)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## 1. Project Overview
-**TechNova Solutions** is a production-grade, multi-agent AI ecosystem designed for enterprise-scale automated support and intelligence. Unlike simple chatbots, this platform utilizes a **state-driven orchestration graph** where 10 specialized AI agents (Sales, HR, IT, Support, etc.) collaborate to solve complex, multi-domain queries with high precision and zero hallucinations.
+## 🏗️ 1. Project Architecture
+The platform follows a highly decoupled, cloud-native architecture designed for 99.9% availability and rapid multi-agent orchestration.
 
----
-
-## 2. Repository Analysis
-| Component | Technology |
-| :--- | :--- |
-| **Frontend** | Vanilla JavaScript (Modern ES6+), CSS3 (Glassmorphism) |
-| **Backend** | Python, FastAPI (Asynchronous) |
-| **Orchestration** | LangGraph (Cyclic Graphs), LangChain |
-| **LLM Provider** | Groq Cloud (Llama 3.1 70B & 8B) |
-| **Vector DB** | Qdrant Cloud (Managed Vector Store) |
-| **Analytics** | Custom Performance Engine (JSON-based) |
-
----
-
-## 3. Recommended LLMOps Architecture
-The production architecture is designed for high availability and low latency.
 ```mermaid
 graph TD
-    User([User]) --> Ingress[Nginx Ingress / AWS ALB]
-    Ingress --> K8s[EKS Cluster]
-    K8s --> Backend[FastAPI Pods]
-    Backend --> Graph[LangGraph Orchestrator]
-    Graph --> Retriever[Qdrant Retriever]
-    Graph --> Agents[Domain Agents]
-    Agents --> Groq[Groq Inference Engine]
-    Agents --> Guardrails[Guardrails AI]
-    Backend --> Monitoring[Prometheus / Grafana / Langfuse]
+    subgraph Client_Layer
+        User([User]) --> Ingress[Nginx Ingress / ALB]
+    end
+
+    subgraph Orchestration_Layer
+        Ingress --> K8s[EKS Cluster / Kind]
+        K8s --> NS[technova Namespace]
+        NS --> Pods[FastAPI Backend Pods]
+        Pods --> Graph[LangGraph Orchestrator]
+    end
+
+    subgraph Intelligence_Layer
+        Graph --> Retriever[Qdrant Cloud Retriever]
+        Graph --> Agents[Domain Agents]
+        Agents --> LLM[Groq Inference Engine]
+        Agents --> Guardrails[Guardrails AI]
+    end
+
+    subgraph Ops_Layer
+        Pods --> Metrics[Prometheus / Grafana]
+        Pods --> Traces[Langfuse]
+        GitHub[GitHub Actions] --> Docker[Docker Hub]
+        Docker --> K8s
+        Terraform[Terraform IaC] --> K8s
+    end
 ```
 
 ---
 
-## 4. Infrastructure Design (IaC)
-Provisioned using **Terraform** for AWS:
-- **VPC & Networking**: Multi-AZ Subnets, NAT Gateway, Security Groups.
-- **Compute**: AWS EKS (Managed Node Groups) with Auto-scaling.
-- **Secrets**: AWS Secrets Manager for Groq/Qdrant keys.
-- **IAM**: Fine-grained IRSA (IAM Roles for Service Accounts).
+## 🛠️ 2. Comprehensive Tool Command Guide
 
----
+### 🐳 **Docker (Containerization)**
+Standardized builds for cross-environment consistency.
+```bash
+# Build the production-grade multi-stage image
+docker build -t bittush8789/llmops-chatbot:latest .
 
-## 5. Containerization Strategy
-- **Multi-Stage Builds**: Drastically reduces image size (from 1.2GB to <400MB).
-- **Distroless/Slim Base**: Uses `python:3.11-slim` for security.
-- **Layer Optimization**: Minimizes build time by strategically ordering `pip install`.
-- **Security Scanning**: Images scanned via `Trivy` in the CI pipeline.
+# Run the container locally with environment variables
+docker run -p 8000:8000 --env-file .env bittush8789/llmops-chatbot:latest
 
----
+# Push to Docker Hub
+docker push bittush8789/llmops-chatbot:latest
+```
 
-## 6. Kubernetes Deployment Design
-- **Namespace Strategy**: `prod`, `staging`, `monitoring`.
-- **HPA**: Auto-scales pods from 2 to 20 based on 70% CPU threshold.
-- **Probes**: `Liveness` and `Readiness` probes ensure zero-downtime rollouts.
-- **Resources**: Requests: 512Mi/500m, Limits: 1Gi/1000m.
+### ☸️ **Kubernetes - Local (Kind)**
+For rapid development and local testing of K8s manifests.
+```bash
+# Create the local cluster
+kind create cluster --name technova-dev
 
----
+# Apply all manifests in order (Namespace -> RBAC -> Deployment -> Service -> Ingress)
+kubectl apply -f k8s/rbac.yaml
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+kubectl apply -f k8s/ingress.yaml
 
-## 7. Helm Chart Strategy
-A unified Helm chart manages the release lifecycle:
-- `values-prod.yaml`: Enterprise-grade replicas and dedicated ingress.
-- `values-dev.yaml`: Single replica, node-port for cost saving.
-- **Release Automation**: Via GitHub Actions and Helm upgrade commands.
+# Check pod status in the technova namespace
+kubectl get pods -n technova
+```
 
----
+### ☸️ **Kubernetes - Production (AWS EKS)**
+Scalable production environment.
+```bash
+# Update local kubeconfig for EKS
+aws eks update-kubeconfig --region us-east-2 --name technova-eks-cluster
 
-## 8. Terraform IaC Design
-The `infra/` directory handles:
-- **EKS Control Plane**: Managed K8s lifecycle.
-- **VPC Subnets**: Isolated private subnets for backend pods.
-- **K8s Provider**: Bootstraps namespaces and secrets directly via Terraform.
+# Deploy production manifests
+kubectl apply -f k8s/
 
----
+# Monitor horizontal pod scaling
+kubectl get hpa -n technova
+```
 
-## 9. CI/CD Pipeline (GitHub Actions)
-```text
-Push to cicd branch 
-→ Lint/Test 
-→ Docker Build & Scan (Trivy) 
-→ Push to AWS ECR 
-→ Terraform Apply (Infra) 
-→ Helm Deploy (App) 
-→ Post-Deployment Smoke Test
+### 🌍 **Terraform (Infrastructure as Code)**
+Automated cloud provisioning.
+```bash
+cd infra
+terraform init    # Initialize providers
+terraform plan    # Preview infrastructure changes
+terraform apply   # Execute provisioning
+```
+
+### 🧠 **Data Pipeline (Ingestion)**
+Populating the Qdrant Cloud Vector Store.
+```bash
+# Install local dependencies
+pip install -r requirements.txt
+
+# Run the ingestion script
+python -m backend.ingest
 ```
 
 ---
 
-## 10. Monitoring Stack
-- **Prometheus**: Real-time metric scraping.
-- **Grafana**: Dashboards for Request Latency, Agent Usage, and Token Consumption.
-- **Langfuse**: Detailed trace logging for LangGraph nodes and prompt inspection.
+## 🔄 3. CI/CD Lifecycle
+Our GitHub Actions pipeline automates the entire "Code to Cloud" journey:
+1. **Validation**: Static analysis and linting (flake8).
+2. **Build**: Docker build with multi-stage optimization.
+3. **Scan**: Vulnerability scanning of the image.
+4. **Deploy**: Terraform updates infrastructure, and Kubectl rolls out the latest image SHA to the `technova` namespace.
 
 ---
 
-## 11. Security Architecture
-- **Guardrails AI**: Validates LLM outputs for PII and toxicity.
-- **WAF**: AWS WAF protection against prompt injection and DDoS.
-- **Secrets Management**: No API keys in the codebase; injected via K8s Secrets.
-- **TLS/SSL**: Automated certificate management via Cert-Manager.
+## 🛡️ 4. Security & Monitoring
+- **RBAC**: Strict Role-Based Access Control implemented via `rbac.yaml`.
+- **Namespace Isolation**: All resources live in the `technova` namespace.
+- **Observability**: Prometheus scrapes metrics on `/metrics`, visualized in Grafana.
+- **Traceability**: Langfuse integration for step-by-step agent trace analysis.
 
 ---
 
-## 12. LLMOps Best Practices
-- **Prompt Versioning**: Decoupled prompt management via ConfigMaps.
-- **Model Fallback**: Automatic routing to Llama 3 70B if 8B fails validation.
-- **Retry Logic**: Exponential backoff for LLM API rate limits.
-- **Hallucination Check**: Cross-verification between retrieved context and agent output.
-
----
-
-## 13. Scaling Strategy
-- **100 Users**: Single replica group, Qdrant Free Tier.
-- **1,000 Users**: Multi-replica EKS, Redis caching for frequent RAG queries.
-- **10,000 Users**: Global Accelerator, Dedicated Qdrant Cluster, GPU inference nodes.
-
----
-
-## 14. Cost Optimization
-- **Groq Inference**: Extremely high TPS at lower cost than OpenAI.
-- **Spot Instances**: Using AWS Spot for 60% savings on K8s nodes.
-- **HPA to Zero**: Scaling non-critical services to zero during off-peak hours.
-
----
-
-## 15. Production Folder Structure
+## 📂 5. Enterprise Folder Structure
 ```text
 .
-├── .github/workflows/    # CI/CD Pipelines
-├── backend/              # Core Agentic Logic
-├── frontend/             # Responsive Web App
-├── helm/                 # K8s Deployment Charts
+├── .github/workflows/    # CI/CD (GitHub Actions)
+├── backend/              # Multi-Agent Logic & API
+├── docs/                 # 60+ Enterprise Knowledge Files
+├── frontend/             # Responsive Web Interface
 ├── infra/                # Terraform (IaC)
-├── k8s/                  # Raw Manifests (Legacy/Fallback)
-├── monitoring/           # Prometheus/Grafana Config
-├── tests/                # Integration & Unit Tests
-└── requirements.txt      # Production Dependencies
+├── k8s/                  # Modular K8s Manifests
+├── Dockerfile            # Multi-stage Production Build
+├── requirements.txt      # Dependency Management
+└── README.md             # Master Documentation
 ```
-
----
-
-## 16. Deployment Flow
-1. **Develop**: Commit code to `cicd`.
-2. **Automate**: GitHub Actions triggers Build & Push.
-3. **Provision**: Terraform updates Infrastructure.
-4. **Release**: Helm upgrades the Kubernetes Deployment.
-5. **Observe**: Grafana/Langfuse start tracking live traffic.
-
----
-
-## 17. Resume Value
-This project demonstrates expertise across:
-- **DevOps**: CI/CD, Docker, Kubernetes, Terraform.
-- **MLOps/LLMOps**: Model serving, RAG pipelines, Observability.
-- **AI Engineering**: Multi-agent orchestration, LangGraph, Vector DBs.
-
----
-
-## 18. Future Enhancements
-- **ArgoCD**: Transition to GitOps-based CD.
-- **Multi-Tenant SaaS**: Namespace-based isolation for different clients.
-- **SSO**: Auth0/Okta integration for enterprise security.
 
 ---
 
