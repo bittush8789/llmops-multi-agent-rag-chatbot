@@ -39,20 +39,36 @@ docker run -p 8000:8000 --env-file .env technova-backend:latest
 ---
 
 ## ☸️ 3. Orchestration (Kubernetes)
-### Implementation
-The application is deployed using a **Rolling Update** strategy on Kubernetes.
-- **Deployment**: Manages replicas and provides self-healing.
-- **Service**: Exposes the application via a LoadBalancer.
-- **Horizontal Pod Autoscaler (HPA)**: Scales pods based on CPU/Memory usage.
+The platform supports a dual-track deployment strategy: **Local Testing (Kind)** and **Production (AWS EKS)**.
 
-**Commands:**
+### **A. Local Development with Kind**
+`Kind` (Kubernetes in Docker) allows you to run a full cluster on your laptop for rapid iteration.
 ```bash
-# Apply configuration
-kubectl apply -f k8s/deployment.yaml
+# Create local cluster
+kind create cluster --name technova-dev
 
-# Monitor rollout
-kubectl rollout status deployment/technova-backend
+# Deploy components
+kubectl apply -f k8s/rbac.yaml
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
 ```
+
+### **B. Production Deployment with AWS EKS**
+For production, we use Terraform to provision a high-availability EKS cluster.
+```bash
+# Switch context to EKS
+aws eks update-kubeconfig --region us-east-2 --name technova-eks-cluster
+
+# Deploy production manifests
+kubectl apply -f k8s/
+```
+
+### **C. Components Breakdown**
+- **Deployment**: Manages pod replicas and self-healing.
+- **Service**: Internal/External load balancing.
+- **Ingress**: Domain-based routing and SSL termination.
+- **RBAC**: Secure Role-Based Access Control within the `technova` namespace.
+
 
 ---
 

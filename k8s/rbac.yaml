@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: technova
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: technova-sa
+  namespace: technova
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: technova
+  name: technova-role
+rules:
+- apiGroups: [""]
+  resources: ["pods", "configmaps", "secrets"]
+  verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: technova-rb
+  namespace: technova
+subjects:
+- kind: ServiceAccount
+  name: technova-sa
+  namespace: technova
+roleRef:
+  kind: Role
+  name: technova-role
+  apiGroup: rbac.authorization.k8s.io

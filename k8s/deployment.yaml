@@ -2,8 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: technova-backend
-  labels:
-    app: technova
+  namespace: technova
 spec:
   replicas: 2
   selector:
@@ -29,22 +28,15 @@ spec:
           limits:
             memory: "1Gi"
             cpu: "1000m"
-        healthCheck:
+        livenessProbe:
           httpGet:
             path: /health
             port: 8000
-          initialDelaySeconds: 15
+          initialDelaySeconds: 20
+          periodSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 10
           periodSeconds: 20
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: technova-service
-spec:
-  selector:
-    app: technova
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8000
-  type: LoadBalancer
