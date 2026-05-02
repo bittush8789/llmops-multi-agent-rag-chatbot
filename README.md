@@ -5,8 +5,8 @@
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-blueviolet.svg)](https://www.terraform.io/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## 🏗️ 1. Project Architecture
-The platform follows a highly decoupled, cloud-native architecture designed for 99.9% availability and rapid multi-agent orchestration.
+## 🏗️ 1. Professional Architecture
+The platform utilizes a decoupled, cloud-native architecture optimized for enterprise scale and multi-agent intelligence.
 
 ```mermaid
 graph TD
@@ -25,12 +25,11 @@ graph TD
         Graph --> Retriever[Qdrant Cloud Retriever]
         Graph --> Agents[Domain Agents]
         Agents --> LLM[Groq Inference Engine]
-        Agents --> Guardrails[Guardrails AI]
+        Agents --> Eval[Ragas Evaluation Suite]
     end
 
     subgraph Ops_Layer
         Pods --> Metrics[Prometheus / Grafana]
-        Pods --> Traces[Langfuse]
         GitHub[GitHub Actions] --> Docker[Docker Hub]
         Docker --> K8s
         Terraform[Terraform IaC] --> K8s
@@ -39,101 +38,74 @@ graph TD
 
 ---
 
-## 🛠️ 2. Comprehensive Tool Command Guide
+## 🚀 2. End-to-End Execution Flow
 
-### 🐳 **Docker (Containerization)**
-Standardized builds for cross-environment consistency.
+Follow these steps to deploy the complete platform from raw data to a live production cluster.
+
+### **Step 1: Knowledge Ingestion (Data Pipeline)**
+Transform 60+ enterprise documents into semantic vectors and store them in the cloud.
 ```bash
-# Build the production-grade multi-stage image
-docker build -t bittush8789/llmops-chatbot:latest .
-
-# Run the container locally with environment variables
-docker run -p 8000:8000 --env-file .env bittush8789/llmops-chatbot:latest
-
-# Push to Docker Hub
-docker push bittush8789/llmops-chatbot:latest
-```
-
-### ☸️ **Kubernetes - Local (Kind)**
-For rapid development and local testing of K8s manifests.
-```bash
-# Create the local cluster
-kind create cluster --name technova-dev
-
-# Apply all manifests in order (Namespace -> RBAC -> Deployment -> Service -> Ingress)
-kubectl apply -f k8s/rbac.yaml
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/service.yaml
-kubectl apply -f k8s/ingress.yaml
-
-# Check pod status in the technova namespace
-kubectl get pods -n technova
-```
-
-### ☸️ **Kubernetes - Production (AWS EKS)**
-Scalable production environment.
-```bash
-# Update local kubeconfig for EKS
-aws eks update-kubeconfig --region us-east-2 --name technova-eks-cluster
-
-# Deploy production manifests
-kubectl apply -f k8s/
-
-# Monitor horizontal pod scaling
-kubectl get hpa -n technova
-```
-
-### 🌍 **Terraform (Infrastructure as Code)**
-Automated cloud provisioning.
-```bash
-cd infra
-terraform init    # Initialize providers
-terraform plan    # Preview infrastructure changes
-terraform apply   # Execute provisioning
-```
-
-### 🧠 **Data Pipeline (Ingestion)**
-Populating the Qdrant Cloud Vector Store.
-```bash
-# Install local dependencies
-pip install -r requirements.txt
-
-# Run the ingestion script
+# Set credentials in .env first
 python -m backend.ingest
 ```
 
----
-
-## 🔄 3. CI/CD Lifecycle
-Our GitHub Actions pipeline automates the entire "Code to Cloud" journey:
-1. **Validation**: Static analysis and linting (flake8).
-2. **Build**: Docker build with multi-stage optimization.
-3. **Scan**: Vulnerability scanning of the image.
-4. **Deploy**: Terraform updates infrastructure, and Kubectl rolls out the latest image SHA to the `technova` namespace.
-
----
-
-## 🛡️ 4. Security & Monitoring
-- **RBAC**: Strict Role-Based Access Control implemented via `rbac.yaml`.
-- **Namespace Isolation**: All resources live in the `technova` namespace.
-- **Observability**: Prometheus scrapes metrics on `/metrics`, visualized in Grafana.
-- **Traceability**: Langfuse integration for step-by-step agent trace analysis.
-
----
-
-## 📂 5. Enterprise Folder Structure
-```text
-.
-├── .github/workflows/    # CI/CD (GitHub Actions)
-├── backend/              # Multi-Agent Logic & API
-├── docs/                 # 60+ Enterprise Knowledge Files
-├── frontend/             # Responsive Web Interface
-├── infra/                # Terraform (IaC)
-├── k8s/                  # Modular K8s Manifests
-├── Dockerfile            # Multi-stage Production Build
-├── requirements.txt      # Dependency Management
-└── README.md             # Master Documentation
+### **Step 2: AI Quality Evaluation (LLMOps CI)**
+Quantify the accuracy and faithfulness of your RAG system before deployment.
+```bash
+# Runs Ragas metrics against ground-truth dataset
+python -m backend.evaluator
 ```
+
+### **Step 3: Infrastructure Provisioning (IaC)**
+Automatically set up the AWS EKS cluster and VPC using Terraform.
+```bash
+cd infra
+terraform init
+terraform apply --auto-approve
+```
+
+### **Step 4: Local Testing (Kubernetes in Docker)**
+Verify the deployment locally using a `Kind` cluster before pushing to the cloud.
+```bash
+kind create cluster --name technova-dev
+kubectl apply -f k8s/rbac.yaml
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+```
+
+### **Step 5: Production Rollout (AWS EKS)**
+Deploy the modular manifests to the live enterprise cluster.
+```bash
+aws eks update-kubeconfig --region us-east-2 --name technova-eks-cluster
+kubectl apply -f k8s/
+kubectl rollout status deployment/technova-backend -n technova
+```
+
+### **Step 6: Real-time Monitoring**
+Access metrics and traces to ensure system health and agent performance.
+- **Metrics**: `http://localhost:3000` (Grafana)
+- **API Health**: `http://<LB_IP>/health`
+
+---
+
+## 🛠️ 3. Comprehensive Tool Guide
+
+| Tool | Purpose | Primary Command |
+| :--- | :--- | :--- |
+| **Docker** | Containerization | `docker build -t technova-app .` |
+| **Kind** | Local K8s | `kind create cluster` |
+| **Terraform** | IaC | `terraform apply` |
+| **Kubectl** | Cluster Management | `kubectl get pods -n technova` |
+| **Ragas** | AI Evaluation | `python -m backend.evaluator` |
+| **FastAPI** | Application Core | `uvicorn backend.main:app` |
+
+---
+
+## 🛡️ 4. Security & Compliance
+- **Namespace Isolation**: All production resources are isolated in the `technova` namespace.
+- **RBAC**: Fine-grained permissions defined in `rbac.yaml` for pod-to-api communication.
+- **Secret Management**: API keys are injected via K8s Secrets, never hardcoded.
+- **Output Guardrails**: Integrated validation node to prevent hallucinations.
 
 ---
 
@@ -144,4 +116,5 @@ Our GitHub Actions pipeline automates the entire "Code to Cloud" journey:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/your-profile)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-lightgrey?style=flat&logo=github)](https://github.com/bittush8789)
 
+---
 ⚖️ **Apache License 2.0**
