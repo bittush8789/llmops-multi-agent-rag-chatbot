@@ -1,33 +1,42 @@
 import os
-from langchain_community.vectorstores import Chroma
+from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_qdrant import QdrantVectorStore
+from qdrant_client import QdrantClient
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-CHROMA_DIR = os.path.join(BASE_DIR, 'chroma_db')
+load_dotenv()
 
-def get_retriever():
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-    if not os.path.exists(CHROMA_DIR):
-        raise Exception("Chroma DB not found. Please run ingest.py first.")
-        
-    vectorstore = Chroma(
-        persist_directory=CHROMA_DIR,
-        embedding_function=embeddings
+QDRANT_URL = os.getenv("QDRANT_URL")
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+COLLECTION_NAME = os.getenv("COLLECTION_NAME", "technova_enterprise")
+
+def get_embeddings():
+    return HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
+def get_vectorstore():
+    client = QdrantClient(
+        url=QDRANT_URL,
+        api_key=QDRANT_API_KEY,
     )
     
-    # Use top_k = 4 as specified
+    embeddings = get_embeddings()
+    
+    vectorstore = QdrantVectorStore(
+        client=client,
+        collection_name=COLLECTION_NAME,
+        embeddings=embeddings,
+    )
+    return vectorstore
+
+def get_retriever():
+    vectorstore = get_vectorstore()
     return vectorstore.as_retriever(search_kwargs={"k": 8})
 
 def retrieve_context(query: str):
     retriever = get_retriever()
     docs = retriever.invoke(query)
     
-    # Format the retrieved documents
-    context = ""
-    sources = set()
-    for doc in docs:
-        context += f"Source: {doc.metadata.get('source', 'Unknown')}\nContent: {doc.page_content}\n\n"
-        source_name = os.path.basename(doc.metadata.get('source', 'Unknown'))
-        sources.add(source_name)
-        
-    return context, list(sources)
+    context = "\n\n".join([doc.page_content for doc in docs])
+    sources = list(set([doc.metadata.get("source", "Unknown") for doc in docs]))
+    
+    return context, sources

@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: technova-backend
+  labels:
+    app: technova
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: technova
+  template:
+    metadata:
+      labels:
+        app: technova
+    spec:
+      containers:
+      - name: backend
+        image: bittush8789/llmops-chatbot:latest
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - secretRef:
+            name: technova-secrets
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        healthCheck:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 20
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: technova-service
+spec:
+  selector:
+    app: technova
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer
