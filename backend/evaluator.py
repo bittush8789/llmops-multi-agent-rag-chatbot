@@ -11,7 +11,7 @@ from backend.graph import build_graph
 load_dotenv()
 
 async def run_evaluation():
-    print("🧪 Starting LLMOps RAG Evaluation Pipeline...")
+    print("Starting LLMOps RAG Evaluation Pipeline...")
     
     # 1. Load Ground Truth Data
     eval_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), "tests", "eval_dataset.json")
@@ -50,7 +50,7 @@ async def run_evaluation():
     # 4. Perform Evaluation using LLM-as-a-judge (Groq/Llama3 via LangChain)
     # Note: Ragas defaults to OpenAI, so in a full setup we'd pass our Groq LLM here.
     # For now, we simulate the structure.
-    print("📊 Calculating Metrics (Faithfulness, Relevancy)...")
+    print("Calculating Metrics (Faithfulness, Relevancy)...")
     
     # result = evaluate(
     #     dataset,
@@ -64,14 +64,14 @@ async def run_evaluation():
         "context_precision": 0.85
     }
     
-    print("\n✅ Evaluation Results:")
+    print("\nEvaluation Results:")
     for metric, score in mock_score.items():
         print(f" - {metric.capitalize()}: {score}")
         
     if mock_score["faithfulness"] < 0.8:
         print("⚠️ WARNING: Low faithfulness detected. Hallucinations likely.")
     else:
-        print("🚀 System is production-ready!")
+        print("System is production-ready!")
 
 if __name__ == "__main__":
     asyncio.run(run_evaluation())
