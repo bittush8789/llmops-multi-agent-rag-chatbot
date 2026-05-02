@@ -5,6 +5,7 @@
 [![LangGraph](https://img.shields.io/badge/LangGraph-Orchestration-orange.svg)](https://github.com/langchain-ai/langgraph)
 [![Groq](https://img.shields.io/badge/LLM-Groq_Llama3-blueviolet.svg)](https://groq.com/)
 [![ChromaDB](https://img.shields.io/badge/VectorDB-Chroma-yellow.svg)](https://www.trychroma.com/)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## 📝 Project Overview
 
@@ -144,7 +145,8 @@ Multi-Agent-AI-FAQ-Chatbot/
 ---
 
 ## ⚖️ License
-Distributed under the **MIT License**.
+
+Distributed under the **Apache License 2.0**. See `LICENSE` for more information.
 
 <p align="center">
   Built with ❤️ for the TechNova Solutions Engineering Team
